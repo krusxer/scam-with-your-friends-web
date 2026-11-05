@@ -77,7 +77,7 @@
 
 
 /* Mobile gameplay controls: larger, separated touch targets. */
-@media (pointer: coarse) and (max-width: 900px){
+@media (max-width: 900px), (pointer: coarse){
  .touch-movement{display:flex;align-items:flex-end;justify-content:space-between;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);gap:12px;pointer-events:none}
  .touch-pad,.touch-actions{display:grid;gap:7px;pointer-events:auto}
  .touch-pad{grid-template-columns:repeat(3, minmax(48px, 62px));grid-template-rows:repeat(2, minmax(48px, 58px))}
@@ -93,7 +93,7 @@
  .office-instructions{display:none}
  .mouse-lock{display:none}
 }
-@media (pointer:coarse) and (max-width:420px){
+@media (max-width:420px){
  .touch-pad{grid-template-columns:repeat(3,52px);grid-template-rows:repeat(2,50px)}
  .touch-actions{grid-template-columns:repeat(2,62px);grid-auto-rows:48px}
  .touch-movement{left:8px;right:8px;gap:7px}
