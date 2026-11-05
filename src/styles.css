@@ -159,3 +159,21 @@
   .touch-pad { grid-template-columns:repeat(3, min(8.5vh,68px)) !important; grid-template-rows:repeat(2,min(8.5vh,68px)) !important; }
   .touch-actions { grid-template-columns:repeat(2,min(10vh,82px)) !important; grid-auto-rows:min(8.5vh,68px) !important; }
 }
+
+/* Mobile/tablet landscape overrides; target the actual game HUD classes. */
+@media (max-width: 1200px), (pointer: coarse) {
+  .source-banner { display:none !important; }
+  .source-site, .source-site-content { height:100dvh !important; min-height:0 !important; overflow:hidden !important; }
+  .source-site-content > .game-root, .game-root { position:fixed !important; inset:0 !important; width:100vw !important; height:100dvh !important; min-height:0 !important; overflow:hidden !important; }
+  .office-instructions, .world-location, .office-quota, .world-hint, .mouse-lock { display:none !important; }
+  .touch-movement { display:flex !important; position:fixed !important; z-index:99999 !important; left:12px !important; right:12px !important; bottom:12px !important; justify-content:space-between !important; align-items:flex-end !important; pointer-events:none !important; }
+  .touch-pad, .touch-actions { display:grid !important; pointer-events:auto !important; gap:6px !important; }
+  .touch-pad { grid-template-columns:repeat(3,58px) !important; grid-template-rows:repeat(2,54px) !important; }
+  .touch-pad .touch-up { grid-column:2 !important; grid-row:1 !important; }
+  .touch-pad button:nth-child(2) { grid-column:1 !important; grid-row:2 !important; }
+  .touch-pad button:nth-child(3) { grid-column:2 !important; grid-row:2 !important; }
+  .touch-pad button:nth-child(4) { grid-column:3 !important; grid-row:2 !important; }
+  .touch-actions { grid-template-columns:repeat(2,70px) !important; grid-auto-rows:52px !important; }
+  .touch-movement button { min-width:0 !important; min-height:48px !important; border-radius:14px !important; background:rgba(31,67,53,.92) !important; border:1px solid #e5d99b !important; color:#fff7dc !important; font-size:11px !important; touch-action:none !important; }
+  .touch-movement .touch-primary { background:#b98c31 !important; }
+}
