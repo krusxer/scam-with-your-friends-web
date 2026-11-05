@@ -71,7 +71,7 @@
 }
 
 /* On touch devices, let the game use the full viewport instead of showing the promo strip. */
-@media (pointer: coarse) {
+@media (pointer: coarse), (max-width: 1200px) {
   .source-banner { display:none !important; }
   .source-site { height:100dvh !important; }
   .source-site-content { height:100dvh !important; }
